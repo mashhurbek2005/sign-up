@@ -1,0 +1,206 @@
+:root{
+    --black-text-color: #3D3B48;
+    --white-text-color: #fff;
+    --link-bg-color: #5E54A4;
+    --invalid-color: #FF7979;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), 
+         url("../fonts/poppins-v20-latin-regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/poppins-v20-latin-500.woff2") format("woff2"), 
+         url("../fonts/poppins-v20-latin-500.woff") format("woff"); 
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/poppins-v20-latin-500italic.woff2") format("woff2"),
+         url("../fonts/poppins-v20-latin-500italic.woff") format("woff"); 
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2"),
+         url("../fonts/poppins-v20-latin-600.woff") format("woff"); 
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""),
+url("../fonts/poppins-v20-latin-700.woff2") format("woff2"), 
+         url("../fonts/poppins-v20-latin-700.woff") format("woff"); 
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", "Arial", sans-serif;
+    font-weight: 600;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container{
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero{
+    padding: 121px 0;
+    background-image: url("../images/bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-info-box{
+    width: 525px;
+}
+
+.hero-title{
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.520833px;
+    color: var(--white-text-color);
+}
+
+.hero-text{
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white-text-color);
+}
+
+.hero-link{
+    padding: 17px 110px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.267857px;
+    color: var(--white-text-color);
+    background-color: var(--link-bg-color);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    border-radius: 10px;
+}
+
+.link-span{
+    display: inline-block;
+    font-weight: 700;
+}
+
+.hero-form{
+    width: 540px;
+    padding: 40px;
+    background-color: var(--white-text-color);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    border-radius: 10px;
+}
+
+.hero-input{
+    width: 460px;
+    margin-bottom: 6px;
+    padding: 15px 0 15px 32px;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    color: var(--black-text-color);
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+}
+
+.hero-input:placeholder{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    color: var(--black-text-color);
+    opacity: 0.75;
+}
+
+.input-bottom-text{
+    display: block;
+    margin-bottom: 19px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: right;
+    color: var(--invalid-color);
+    opacity: 0;
+}
+
+.hero-input:not(:placeholder-shown):not(:focus):invalid{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-image: url("../images/error.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right 27px center;
+    color: var(--invalid-color);
+    border: 2px solid var(--invalid-color);
+}
+
+.hero-input:not(:placeholder-shown):not(:focus):invalid + .input-bottom-text{
+    opacity: 1;
+}
+
+.hero-btn{
+    width: 460px;
+    margin-bottom: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    color: var(--white-text-color);
+    background: #38CC8B;
+    box-shadow: inset 0px -4px 0px #00000017;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero-btn:hover{
+    background-color: #77E2B3;
+}
+
+.input-text{
+    margin: 0;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 26px;
+    text-align: center;
+    color: #BAB7D4;
+}
+
+.input-text-link{
+    font-weight: 700;
+    color: var(--invalid-color);
+}
+
